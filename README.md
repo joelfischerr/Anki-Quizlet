@@ -1,5 +1,7 @@
 # Anki-Quizlet
 
+_**NOTE** This has the certificate verification disabled which makes it work on macOS but also makes less secure. I won't take any responsibility for damage to caused anything by the use of this.
+
 _**NOTE** fork of [Improved Quizlet to Anki Importer](https://ankiweb.net/shared/info/590899480)_
 
 This is a simple _Quizlet_ to _Anki_ importer. It has the following advantages over the alternatives:
