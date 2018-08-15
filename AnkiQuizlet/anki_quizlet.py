@@ -17,7 +17,7 @@ from __future__ import unicode_literals
 __window = None
 
 # Requests to Quizlet
-import sys, math, time, json, re
+import sys, math, time, json, re, ssl
 if sys.version_info < (3, 0):
     from urllib import urlretrieve
     from urlparse import urlparse
@@ -261,6 +261,7 @@ class QuizletDownloader(QThread):
 
     def run(self):
         try: # try to parse this url and get valid json
+            ssl._create_default_https_context = ssl._create_unverified_context
             self.results = json.load(urlopen(self.url))
         except URLError as e:
             self.error = True
